@@ -39,11 +39,52 @@ export default makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
   },
-  companyLogo: {
-    height: "30px",
-  },
   companyName: {
     fontWeight: "700",
-    // fontSize: "20px",
+  },
+  formTitle: {
+    margin: "1.5rem 0",
+    fontWeight: "700",
+  },
+  inputWrapper: {
+    marginBottom: "0.9rem",
+  },
+  inputLabel: {
+    fontSize: "0.8rem",
+    color: "#25252d",
+    marginBottom: "7px",
+  },
+  submitContainer: {
+    margin: "0.8rem 0",
+  },
+  submit: {
+    textTransform: "none",
+    padding: "8px 16px 8px 10px",
+    fontSize: "1.1rem",
+  },
+  signupToggleBtn: {
+    padding: "0",
+    textTransform: "none",
+  },
+  googleSignupContainer: {
+    marginTop: "1.75rem",
+  },
+  googleSignupText: {
+    fontSize: "1.1rem",
+  },
+  googleButton: {
+    padding: "5px 16px",
+    color: "#5e6c84",
+    fontWeight: "500",
+    background: "#f3f7ff",
+    borderRadius: "40px",
+    textTransform: "none",
+    fontSize: "1.15rem",
+    "&:hover": {
+      backgroundColor: "#dbfaff",
+    },
+    "&:active": {
+      backgroundColor: "#dbfaff",
+    },
   },
 }));

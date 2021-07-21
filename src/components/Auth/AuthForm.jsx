@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import useStyles from "./styles";
-import { Typography, Button } from "@material-ui/core";
+import { Typography, Button, Grid } from "@material-ui/core";
+import ChevronRightRoundedIcon from "@material-ui/icons/ChevronRightRounded";
 import logo from "./assets/logo.svg";
-import { Grid } from "@material-ui/core";
+import GoogleIconSvg from "./assets/google-icon.svg";
 import { GoogleLogin } from "react-google-login";
 import { useHistory } from "react-router-dom";
 import Input from "./Input";
@@ -40,12 +41,12 @@ const AuthForm = () => {
     // Register user
 
     if (isSignup) history.push("/details");
-    else history.push("/dashboard");
+    else history.push("/dashboard/1"); // Add userId after dashboard -> `/dashboard/${userId}`
   };
 
   const googleSuccess = async (res) => {
-    const result = res?.profileObj;
-    const token = res?.tokenId;
+    // const result = res?.profileObj;
+    // const token = res?.tokenId;
     // perform user authentication
 
     history.push("/details");
@@ -59,15 +60,15 @@ const AuthForm = () => {
   return (
     <div>
       <div className={classes.company}>
-        <img src={logo} alt="Logo" className={classes.companyLogo} />
+        <img src={logo} alt="Company Logo" style={{ height: "30px" }} />
         &nbsp;&nbsp;&nbsp;
         <Typography variant="h5" className={classes.companyName}>
           Company
         </Typography>
       </div>
       <div>
-        <Typography variant="h5" className={classes.formTitle}>
-          Register
+        <Typography variant="h6" className={classes.formTitle}>
+          {isSignup ? "Register" : "Login"}
         </Typography>
         <form className={classes.form} onSubmit={handleSubmit}>
           <Grid container spacing={2}>
@@ -92,7 +93,7 @@ const AuthForm = () => {
             />
             <Input
               name="password"
-              label="Password"
+              label={isSignup ? "Create Password" : "Password"}
               placeholder="Enter password"
               handleChange={handleChange}
               required
@@ -110,28 +111,51 @@ const AuthForm = () => {
               />
             )}
           </Grid>
-          <Grid container justifyContent="flex-end">
-            <Grid item>
+          <Grid
+            container
+            justifyContent="space-between"
+            className={classes.submitContainer}
+          >
+            <Grid item xs={4}>
               <Button
                 type="submit"
-                fullWidth
                 variant="contained"
                 color="primary"
+                fullWidth
                 className={classes.submit}
               >
                 {isSignup ? "Sign Up" : "Log In"}
+                <ChevronRightRoundedIcon fontSize="small" />
               </Button>
             </Grid>
-            <Grid item>
-              {isSignup ? "Already have an account?" : "Don't have an account?"}
-              <Button onClick={switchMode}>
+            <Grid item xs={7}>
+              <Typography variant="body1" color="textSecondary">
+                {isSignup
+                  ? "Already have an account?"
+                  : "Don't have an account?"}
+              </Typography>
+              <Button
+                onClick={switchMode}
+                color="primary"
+                className={classes.signupToggleBtn}
+              >
                 {isSignup ? "Login here" : "Register here"}
               </Button>
             </Grid>
           </Grid>
-          <Grid container>
-            <Grid item className={classes.googleSignupText}>
-              Or Sign Up with&nbsp;
+          <Grid
+            container
+            alignItems="center"
+            className={classes.googleSignupContainer}
+          >
+            <Grid item>
+              <Typography
+                variant="body1"
+                color="textSecondary"
+                className={classes.googleSignupText}
+              >
+                Or Sign Up with&nbsp; &nbsp;
+              </Typography>
             </Grid>
             <Grid item>
               <GoogleLogin
@@ -141,7 +165,13 @@ const AuthForm = () => {
                     className={classes.googleButton}
                     onClick={renderProps.onClick}
                     disabled={renderProps.disabled}
-                    // startIcon={<GoogleIcon />}
+                    startIcon={
+                      <img
+                        src={GoogleIconSvg}
+                        alt="Google Logo"
+                        style={{ height: "23px" }}
+                      />
+                    }
                   >
                     Google
                   </Button>

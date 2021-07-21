@@ -16,7 +16,7 @@ const Auth = () => {
               container
               justifyContent="space-between"
               direction="row"
-              spacing={5}
+              spacing={6}
             >
               <Grid item xs={12} md={7}>
                 <img src={FormImg} alt="" className={classes.displayImg} />

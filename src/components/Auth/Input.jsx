@@ -8,6 +8,7 @@ import {
 } from "@material-ui/core";
 import Visibility from "@material-ui/icons/Visibility";
 import VisibilityOff from "@material-ui/icons/VisibilityOff";
+import useStyles from "./styles";
 
 const Input = ({
   half,
@@ -21,9 +22,10 @@ const Input = ({
   type,
   handleShowPassword,
 }) => {
+  const classes = useStyles();
   return (
-    <Grid item xs={12} sm={half ? 6 : 12}>
-      <InputLabel htmlFor={name}>
+    <Grid item xs={12} sm={half ? 6 : 12} className={classes.inputWrapper}>
+      <InputLabel htmlFor={name} className={classes.inputLabel}>
         {label}
         {star && <sup style={{ color: "red" }}>*</sup>}
       </InputLabel>
@@ -40,7 +42,14 @@ const Input = ({
           name === "password" ? (
             <InputAdornment position="end">
               <IconButton onClick={handleShowPassword}>
-                {type === "password" ? <Visibility /> : <VisibilityOff />}
+                {type === "password" ? (
+                  <Visibility style={{ color: "#9da7bd" }} fontSize="small" />
+                ) : (
+                  <VisibilityOff
+                    style={{ color: "#9da7bd" }}
+                    fontSize="small"
+                  />
+                )}
               </IconButton>
             </InputAdornment>
           ) : null
