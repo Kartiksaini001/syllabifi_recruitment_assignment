@@ -20,9 +20,6 @@ export default makeStyles((theme) => ({
     objectFit: "cover",
     borderRadius: "10px",
   },
-  loginText: {
-    color: theme.palette.primary,
-  },
   authFooter: {
     padding: "1.25rem",
     display: "flex",
@@ -58,13 +55,11 @@ export default makeStyles((theme) => ({
     margin: "0.8rem 0",
   },
   submit: {
-    textTransform: "none",
     padding: "8px 16px 8px 10px",
     fontSize: "1.1rem",
   },
   signupToggleBtn: {
     padding: "0",
-    textTransform: "none",
   },
   googleSignupContainer: {
     marginTop: "1.75rem",
@@ -78,7 +73,6 @@ export default makeStyles((theme) => ({
     fontWeight: "500",
     background: "#f3f7ff",
     borderRadius: "40px",
-    textTransform: "none",
     fontSize: "1.15rem",
     "&:hover": {
       backgroundColor: "#dbfaff",

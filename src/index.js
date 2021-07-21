@@ -9,7 +9,7 @@ const theme = createTheme({
     primary: {
       light: "#9f7af4",
       main: "#8759f2",
-      dark: "#443663",
+      dark: "#5e3ea9",
     },
     secondary: {
       light: "#f76388",
@@ -25,6 +25,13 @@ const theme = createTheme({
       light: "#e9b24b",
       main: "#e49f1e",
       dark: "#9f6f15",
+    },
+  },
+  overrides: {
+    MuiButton: {
+      root: {
+        textTransform: "capitalize",
+      },
     },
   },
 });
