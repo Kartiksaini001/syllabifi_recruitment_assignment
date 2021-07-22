@@ -11,7 +11,7 @@ export default makeStyles((theme) => ({
     borderRadius: "1rem",
     boxShadow: "0px 25px 50px 2px rgba(36,20,72,0.1)",
     padding: "3rem",
-    maxWidth: "950px",
+    width: "930px",
   },
   formTitle: {
     fontWeight: "500",
@@ -20,8 +20,36 @@ export default makeStyles((theme) => ({
   formSubtitle: {
     marginTop: "0.7rem",
   },
+  dotsContainer: {
+    textAlign: "center",
+    marginBottom: "3.5rem",
+  },
+  dot: {
+    width: "0.5rem",
+    height: "0.5rem",
+    display: "inline-block",
+    backgroundColor: "#fff",
+    margin: "0 0.25rem",
+    borderRadius: "20px",
+    border: "2px solid",
+    borderColor: theme.palette.primary.main,
+    transition: "background-color 0.5s, width 0.5s",
+  },
+  dotSuccess: {
+    backgroundColor: theme.palette.success.main,
+    borderColor: theme.palette.success.main,
+  },
+  dotActive: {
+    width: "2.5rem",
+    backgroundColor: "#443663",
+    borderColor: "#443663",
+  },
   subjectsFormContainer: {
     margin: "4rem 0 6rem",
+  },
+  preferencesFormContainer: {
+    margin: "1.5rem 0 3rem",
+    width: "580px",
   },
   checkboxContainer: {
     padding: "0.6rem 1.5rem",
@@ -50,26 +78,56 @@ export default makeStyles((theme) => ({
     paddingLeft: "1rem",
     width: "min-content",
   },
-  checkbox: {
-    position: "absolute",
-    top: "0",
-    right: "0",
+  checkboxDisplay: {
     color: "#c8c8ca",
     "&:hover": {
       color: "#929296",
     },
+  },
+  checkboxPosition: {
+    position: "absolute",
+    top: "0",
+    right: "0",
   },
   checkboxActive: {
     "&:hover": {
       color: theme.palette.primary.main,
     },
   },
+  languagesGroup: {
+    border: "2px solid #eeeaf9",
+    borderRadius: "0.5rem",
+    backgroundColor: "#fcfbfd",
+    padding: "0.65rem 1.5rem",
+    marginBottom: "2.5rem",
+  },
+  languagesGroupTitle: {
+    fontSize: "1.1rem",
+    fontWeight: "500",
+    margin: "1rem 0",
+  },
+  languages: {
+    marginRight: "0",
+    flex: "1 0 38%",
+    "&:nth-child(3n)": {
+      flexBasis: "18%",
+    },
+  },
+  hasStylusText: {
+    fontSize: "1.05rem",
+  },
+  hasStylusBtn: {
+    marginLeft: "1rem",
+    padding: "0.35rem 1.5rem",
+    borderWidth: "2px",
+    "&:hover": {
+      borderWidth: "2px",
+    },
+  },
   simpleBtn: {
     padding: "0.5rem 1.75rem",
-    fontSize: "1.1rem",
   },
   nextBtn: {
     padding: "0.5rem 2.5rem",
-    fontSize: "1.1rem",
   },
 }));

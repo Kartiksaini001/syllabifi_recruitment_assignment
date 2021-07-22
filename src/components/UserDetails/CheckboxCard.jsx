@@ -21,7 +21,7 @@ const CheckboxCard = ({ img, text }) => {
         <CardMedia className={classes.cardMedia} image={img} title={text} />
         <div className={classes.cardLabel}>{text}</div>
         <Checkbox
-          className={`${classes.checkbox} ${
+          className={`${classes.checkboxDisplay} ${classes.checkboxPosition} ${
             checked ? classes.checkboxActive : ""
           }`}
           color="primary"

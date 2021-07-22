@@ -11,11 +11,12 @@ import VisibilityOff from "@material-ui/icons/VisibilityOff";
 import useStyles from "./styles";
 
 const Input = ({
-  half,
+  size,
   name,
   placeholder,
   handleChange,
   label,
+  value,
   required,
   star,
   autoFocus,
@@ -24,16 +25,17 @@ const Input = ({
 }) => {
   const classes = useStyles();
   return (
-    <Grid item xs={12} sm={half ? 6 : 12} className={classes.inputWrapper}>
+    <Grid item xs={12} sm={size} className={classes.inputWrapper}>
       <InputLabel htmlFor={name} className={classes.inputLabel}>
         {label}
-        {star && <sup style={{ color: "red" }}>*</sup>}
+        {star && <span style={{ color: "red" }}>*</span>}
       </InputLabel>
       <OutlinedInput
         placeholder={placeholder}
         name={name}
         onChange={handleChange}
         variant="outlined"
+        defaultValue={value}
         required={required}
         fullWidth
         autoFocus={autoFocus}

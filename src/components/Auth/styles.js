@@ -43,23 +43,15 @@ export default makeStyles((theme) => ({
     margin: "1.5rem 0",
     fontWeight: "700",
   },
-  inputWrapper: {
-    marginBottom: "0.9rem",
-  },
-  inputLabel: {
-    fontSize: "0.8rem",
-    color: "#25252d",
-    marginBottom: "7px",
-  },
   submitContainer: {
     margin: "0.8rem 0",
   },
   submit: {
     padding: "8px 16px 8px 10px",
-    fontSize: "1.1rem",
   },
   signupToggleBtn: {
     padding: "0",
+    fontSize: "1rem",
   },
   googleSignupContainer: {
     marginTop: "1.75rem",
@@ -73,7 +65,6 @@ export default makeStyles((theme) => ({
     fontWeight: "500",
     background: "#f3f7ff",
     borderRadius: "40px",
-    fontSize: "1.15rem",
     "&:hover": {
       backgroundColor: "#dbfaff",
     },

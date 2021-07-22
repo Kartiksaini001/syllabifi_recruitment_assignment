@@ -6,7 +6,7 @@ import logo from "./assets/logo.svg";
 import GoogleIconSvg from "./assets/google-icon.svg";
 import { GoogleLogin } from "react-google-login";
 import { useHistory } from "react-router-dom";
-import Input from "./Input";
+import Input from "../Input";
 
 const GOOGLE_ID = process.env.REACT_APP_GOOGLE_CLIENT_ID;
 

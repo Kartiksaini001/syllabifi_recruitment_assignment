@@ -31,6 +31,7 @@ const theme = createTheme({
     MuiButton: {
       root: {
         textTransform: "capitalize",
+        fontSize: "1.1rem",
       },
     },
   },
