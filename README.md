@@ -1,3 +1,26 @@
+# Syllabifi
+
+This repo is for the assignment given by Syllabifi.
+
+## Tools & Features
+
+- The website is built using **ReactJs**
+- **Material UI** is used for Frontend designing
+- Routing is done using **React Router Dom**
+- Implemented **Google OAuth** for User Authentication
+- Setup three routes as follows:
+  - `/auth`: For user registration/login
+  - `/details`: User will be redirected to this route after successfull registration
+  - `/dashboard/:userId`: Custom Dashboard for every user. User will be redirected to this route after filling the `/details` route
+
+## Installation
+
+- Clone the repository in your local machine.
+- Open the command line/terminal inside the root folder of the project.
+- Run `npm install` to install the required dependencies.
+- For Google OAuth, you will need to setup environment variable named `REACT_APP_GOOGLE_CLIENT_ID` equal to the **Google Client Id** for OAuth.
+- Then, run `npm run start` to see the project in your local environment ([http://localhost:3000](http://localhost:3000)).
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

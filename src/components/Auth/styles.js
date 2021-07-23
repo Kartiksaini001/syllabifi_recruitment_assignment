@@ -9,8 +9,6 @@ export default makeStyles((theme) => ({
     alignItems: "center",
   },
   paper: {
-    borderRadius: "1rem",
-    boxShadow: "0px 25px 50px 2px rgba(36,20,72,0.1)",
     padding: "3rem",
     maxWidth: "900px",
   },

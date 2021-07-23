@@ -33,6 +33,31 @@ const theme = createTheme({
         textTransform: "capitalize",
         fontSize: "1.1rem",
       },
+      outlined: {
+        borderWidth: "2px",
+        "&:hover": {
+          borderWidth: "2px",
+        },
+      },
+      outlinedPrimary: {
+        borderWidth: "2px",
+        "&:hover": {
+          borderWidth: "2px",
+        },
+      },
+    },
+    MuiPaper: {
+      elevation1: {
+        boxShadow: "0 20px 65px -20px rgba(0, 0, 0, 0.1)",
+      },
+      rounded: {
+        borderRadius: "1rem",
+      },
+    },
+    MuiTableCell: {
+      root: {
+        borderBottom: "0",
+      },
     },
   },
 });

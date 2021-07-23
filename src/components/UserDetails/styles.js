@@ -8,8 +8,6 @@ export default makeStyles((theme) => ({
     alignItems: "center",
   },
   paper: {
-    borderRadius: "1rem",
-    boxShadow: "0px 25px 50px 2px rgba(36,20,72,0.1)",
     padding: "3rem",
     width: "930px",
   },
@@ -119,10 +117,6 @@ export default makeStyles((theme) => ({
   hasStylusBtn: {
     marginLeft: "1rem",
     padding: "0.35rem 1.5rem",
-    borderWidth: "2px",
-    "&:hover": {
-      borderWidth: "2px",
-    },
   },
   simpleBtn: {
     padding: "0.5rem 1.75rem",

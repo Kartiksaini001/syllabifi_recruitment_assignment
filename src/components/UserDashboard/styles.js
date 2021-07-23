@@ -41,9 +41,49 @@ export default makeStyles((theme) => ({
     margin: "0.3rem 0",
     fontSize: "0.95rem",
     paddingLeft: "0.8rem",
+    color: "#5b5b61",
+  },
+  sideNavBtnActive: {
+    color: theme.palette.primary.main,
+    backgroundColor: "#eeeaf9",
   },
   sideNavIcon: {
     fontSize: "1.5rem !important",
     color: "#5b5b61",
+  },
+  sideNavIconActive: {
+    color: theme.palette.primary.main,
+  },
+  mainSection: {
+    padding: "6.5rem 0 0 16rem",
+  },
+  welcomeText: {
+    fontWeight: "500",
+    fontSize: "1.9rem",
+    marginBottom: "2rem",
+  },
+  priorityWrapper: {
+    padding: "1.5rem",
+    "& h6": {
+      fontWeight: "700",
+      fontSize: "1.5rem",
+    },
+  },
+  textWithArrow: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    "& span": {
+      color: theme.palette.secondary.main,
+      fontWeight: "500",
+    },
+  },
+  bestPracticesWrapper: {
+    margin: "1.75rem 0",
+    padding: "1.5rem",
+    "& h6": {
+      fontWeight: "700",
+      fontSize: "1.5rem",
+    },
   },
 }));

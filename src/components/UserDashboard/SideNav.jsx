@@ -17,7 +17,11 @@ const SideNav = () => {
     {
       label: "Dashboard",
       link: "/dashboard",
-      icon: <DashboardRounded className={classes.sideNavIcon} />,
+      icon: (
+        <DashboardRounded
+          className={`${classes.sideNavIcon} ${classes.sideNavIconActive}`}
+        />
+      ),
     },
     {
       label: "Tasks",
@@ -50,19 +54,46 @@ const SideNav = () => {
           Company
         </Typography>
       </div>
-      <Grid container direction="column">
-        {navItems.map((item, id) => (
-          <Grid item key={id} xs={12}>
-            <Button
-              fullWidth
-              startIcon={item.icon}
-              href={item.link}
-              className={classes.sideNavBtn}
-            >
-              {item.label}
-            </Button>
+      <Grid
+        container
+        direction="column"
+        justifyContent="space-between"
+        style={{ height: "83%" }}
+      >
+        <Grid container item direction="column">
+          {navItems.map((item, id) => (
+            <Grid item key={id} xs={12}>
+              <Button
+                fullWidth
+                startIcon={item.icon}
+                href={item.link}
+                className={`${classes.sideNavBtn} ${
+                  item.label === "Dashboard" ? classes.sideNavBtnActive : ""
+                }`}
+              >
+                {item.label}
+              </Button>
+            </Grid>
+          ))}
+        </Grid>
+        <Grid
+          container
+          item
+          spacing={1}
+          direction="column"
+          style={{ paddingLeft: "0.75rem" }}
+        >
+          <Grid item>
+            <Typography variant="caption" color="textSecondary">
+              Terms and Conditions
+            </Typography>
           </Grid>
-        ))}
+          <Grid item>
+            <Typography variant="caption" color="textSecondary">
+              Privacy Policy
+            </Typography>
+          </Grid>
+        </Grid>
       </Grid>
     </div>
   );
